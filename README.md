@@ -208,7 +208,7 @@ The snapshot represents the clean baseline of the laboratory. If a future exerci
 Documenting problems is an important part of the project.
 
 ## Problem 1. Error when adding NAT Network 
-I accidentally added the import the Kali Linux before setting the NAT network configuration. I deleted the Kali Linux Machine, configure network setting and import the Kali Linux again into the Virtual Box and its working fine. 
+I accidentally added imported Kali Linux before setting the NAT network configuration. I deleted the Kali Linux Machine, configure network setting and import the Kali Linux again into the Virtual Box and its working fine. 
 
 ---
 
