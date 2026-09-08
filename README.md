@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔐 Cybersecurity Lab Environment Setup
+# 🔐 Cybersecurity Internship Project Lab Environment Setup
 
 **Building an isolated virtual lab for penetration testing and ethical hacking practice**
 </div>
@@ -221,71 +221,31 @@ DNS:
 
 Documenting problems is an important part of the project.
 
-## Problem 1. Internet Connectivity After Static IP Configuration
-
-After manually configuring the IPv4 settings, Internet connectivity may fail depending on the Kali/NetworkManager configuration.
-
-One workaround used during this lab was:
-
-```bash
-sudo nmcli connection modify "Wired connection 1" ipv4.dad-timeout 0
-```
-
-The network connection was then restarted/rebooted and connectivity was tested again.
-
-> **Important:** Network interface and connection names may differ between systems. Students should first identify their actual connection name before running an `nmcli` command.
-
----
-
-## Problem 2. VirtualBox VT-x / Virtualization Error
-
-The VM initially failed to start because hardware virtualization was disabled in the system firmware/BIOS.
-
-The issue was resolved by:
-
-1. Restarting the computer.
-2. Entering BIOS/UEFI settings.
-3. Enabling Intel VT-x / hardware virtualization.
-4. Saving the configuration.
-5. Restarting the computer.
-6. Starting the Kali VM again.
-
-After enabling virtualization, the VM started successfully.
-
+## Problem 1. Error when adding NAT Network 
+I accidentally added the import the Kali Linux before setting the NAT network configuration. I deleted the Kali Linux Machine, configure network setting and import the Kali Linux again into the Virtual Box and its working fine. 
 
 ---
 
 # 💡 What I Learned
 
-Through this project, I learned how to create and configure a virtual environment for cybersecurity practice.
+Through this project, I learned how to create and configure a virtual environment for cybersecurity practice. The most important concepts I learned include:
 
-The most important concepts I learned include:
+1. NAT vs NAT Network
+- A standard NAT configuration and a NAT Network serve different purposes.
+- A NAT Network allows multiple VMs connected to the same virtual network to communicate with one another while providing network address translation for external connectivity.
+- This makes it useful for building a multi-machine cybersecurity laboratory.
 
-### 1. NAT vs NAT Network
+2. Virtual Machine Networking
+- I learned how VirtualBox virtual network adapters connect virtual machines to different types of networks and how network configuration affects communication between machines.
 
-A standard NAT configuration and a NAT Network serve different purposes.
+3. Static IP Configuration
+- I learned how to configure and verify IPv4 addressing, subnet masks, gateways, and DNS settings in Kali Linux.
 
-A NAT Network allows multiple VMs connected to the same virtual network to communicate with one another while providing network address translation for external connectivity.
+4. VM Snapshots
+- I learned that a clean snapshot should be created before performing risky or experimental activities and provides a known-good recovery point for future cybersecurity exercises.
 
-This makes it useful for building a multi-machine cybersecurity laboratory.
-
-### 2. Virtual Machine Networking
-
-I learned how VirtualBox virtual network adapters connect virtual machines to different types of networks and how network configuration affects communication between machines.
-
-### 3. Static IP Configuration
-
-I learned how to configure and verify IPv4 addressing, subnet masks, gateways, and DNS settings in Kali Linux.
-
-### 4. VM Snapshots
-
-I learned that a clean snapshot should be created **before performing risky or experimental activities**.
-
-This provides a known-good recovery point for future cybersecurity exercises.
-
-### 5. Documentation
-
-I learned that documenting commands, configuration, screenshots, problems, and solutions is an important part of a professional cybersecurity project.
+5. Documentation
+- I learned that documenting commands, configuration, screenshots, problems, and solutions is an important part of a professional cybersecurity project.
 
 ---
 
@@ -304,6 +264,8 @@ This laboratory is intended strictly for education purposes only.
 ---
 
 # 👤 Author
+
+Nur Izzati Binti Ayub 
 
 **Waqas Karim**\
 Cybersecurity Professional B082
