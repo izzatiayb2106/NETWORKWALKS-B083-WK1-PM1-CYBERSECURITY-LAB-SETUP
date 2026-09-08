@@ -51,9 +51,7 @@ The main objectives of this project are to:
 
 ## 🛡️ Purpose of the Lab
 
-The lab provides an isolated and controlled environment for cybersecurity learning and authorized security testing.
-
-It can be used for activities such as:
+The lab provides an isolated and controlled environment for cybersecurity learning and authorized security testing such as:
 
 - Network reconnaissance
 - Port scanning
@@ -63,16 +61,12 @@ It can be used for activities such as:
 - Exploitation practice
 - Security-tool experimentation
 
-⚠️ **Important:** This laboratory must only be used for systems that you own or have explicit permission to test. Do not use the lab or its tools to attack unauthorized systems.
-
 ---
 
 ## 🏗️ Lab Architecture
 
 ![](1-screenshot-title-image.png)
 
-
-Additional target machines can be added to the same virtual network in future projects.
 
 ---
 
@@ -159,7 +153,7 @@ A shared folder was also configured for transferring required files between the 
 
 The Kali Linux network configuration was checked and configured with a consistent IPv4 address.
 
-Example configuration:
+configuration:
 
 ```text
 IP Address: 10.0.0.2
@@ -167,8 +161,6 @@ Subnet Mask: 255.255.255.0
 Gateway: 10.0.0.1
 DNS: 8.8.8.8
 ```
-
-A consistent IP address makes it easier to document the lab and reference the Kali machine in future exercises.
 
 ![](4-screenshot-kali-network-settings.png)
 
@@ -178,15 +170,13 @@ A consistent IP address makes it easier to document the lab and reference the Ka
 
 After completing the initial configuration, a VirtualBox snapshot was created.
 
-Example snapshot name:
+Snapshot name:
 
 ```text
-Clean Kali - Network Setup
+fresh kalilinux
 ```
 
-The snapshot represents the clean baseline of the laboratory.
-
-If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
+The snapshot represents the clean baseline of the laboratory. If a future exercise changes or damages the VM configuration, the machine can be restored to this baseline.
 
 
 ---
@@ -202,20 +192,16 @@ If a future exercise changes or damages the VM configuration, the machine can be
 | 🧰 Verify Nmap                | `nmap --version`                | Nmap version displayed          |
 | 🔄 Verify snapshot            | Restore snapshot and run `ip a` | Baseline configuration restored |
 
-### Example Results
+### Results
+<img width="1920" height="1080" alt="Screenshot 2026-09-08 153604" src="https://github.com/user-attachments/assets/c8b4fa6e-3df5-4953-8aae-8f554f61e72e" />
+<img width="1920" height="1080" alt="Screenshot 2026-09-08 162829" src="https://github.com/user-attachments/assets/d6c1a88f-7028-4b54-a37d-c77e545b9a3b" />
+<img width="1920" height="1080" alt="Screenshot 2026-09-08 162814" src="https://github.com/user-attachments/assets/5677de3a-ef46-44e1-bfcb-76c8b53a44f7" />
 
-```text
-IP Address:
-10.0.0.2/24
 
-Gateway:
-10.0.0.1
 
-DNS:
-8.8.8.8
-```
 
----
+
+
 
 # 🐞 Problems Encountered & Solutions
 
